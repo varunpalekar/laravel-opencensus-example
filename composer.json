@@ -22,6 +22,8 @@
         "laravel/framework": "5.5.*",
         "laravel/passport": "^3.0",
         "laravel/tinker": "~1.0",
+        "opencensus/opencensus": "^0.5.2",
+        "opencensus/opencensus-exporter-jaeger": "~0.1",
         "predis/predis": "^1.1"
     },
     "require-dev": {

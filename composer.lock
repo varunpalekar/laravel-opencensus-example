@@ -4,8 +4,165 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b06c4910356339d19cf7cba2aa09bac",
+    "content-hash": "dc8ad927bd48dab51bed3880247a6da3",
     "packages": [
+        {
+            "name": "apache/thrift",
+            "version": "0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apache/thrift.git",
+                "reference": "327ebb6c2b6df8bf075da02ef45a2a034e9b79ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apache/thrift/zipball/327ebb6c2b6df8bf075da02ef45a2a034e9b79ba",
+                "reference": "327ebb6c2b6df8bf075da02ef45a2a034e9b79ba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
+            "autoload": {
+                "psr-0": {
+                    "Thrift": "lib/php/lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Apache Thrift Developers",
+                    "email": "dev@thrift.apache.org",
+                    "homepage": "http://thrift.apache.org"
+                }
+            ],
+            "description": "Apache Thrift RPC system",
+            "homepage": "http://thrift.apache.org/",
+            "time": "2017-12-03T17:27:58+00:00"
+        },
+        {
+            "name": "cache/adapter-common",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-cache/adapter-common.git",
+                "reference": "6320bb5f5574cb88438059b59f8708da6b6f1d32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-cache/adapter-common/zipball/6320bb5f5574cb88438059b59f8708da6b6f1d32",
+                "reference": "6320bb5f5574cb88438059b59f8708da6b6f1d32",
+                "shasum": ""
+            },
+            "require": {
+                "cache/tag-interop": "^1.0",
+                "php": "^5.6 || ^7.0",
+                "psr/cache": "^1.0",
+                "psr/log": "^1.0",
+                "psr/simple-cache": "^1.0"
+            },
+            "require-dev": {
+                "cache/integration-tests": "^0.16",
+                "phpunit/phpunit": "^5.7.21"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cache\\Adapter\\Common\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Scherer",
+                    "email": "aequasi@gmail.com",
+                    "homepage": "https://github.com/aequasi"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                }
+            ],
+            "description": "Common classes for PSR-6 adapters",
+            "homepage": "http://www.php-cache.com/en/latest/",
+            "keywords": [
+                "cache",
+                "psr-6",
+                "tag"
+            ],
+            "time": "2018-07-08T13:04:33+00:00"
+        },
+        {
+            "name": "cache/tag-interop",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-cache/tag-interop.git",
+                "reference": "c7496dd81530f538af27b4f2713cde97bc292832"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-cache/tag-interop/zipball/c7496dd81530f538af27b4f2713cde97bc292832",
+                "reference": "c7496dd81530f538af27b4f2713cde97bc292832",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "psr/cache": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cache\\TagInterop\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com",
+                    "homepage": "https://github.com/nicolas-grekas"
+                }
+            ],
+            "description": "Framework interoperable interfaces for tags",
+            "homepage": "http://www.php-cache.com/en/latest/",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr6",
+                "tag"
+            ],
+            "time": "2017-03-13T09:14:27+00:00"
+        },
         {
             "name": "defuse/php-encryption",
             "version": "v2.1.0",
@@ -1500,6 +1657,110 @@
             "time": "2017-06-28T20:53:48+00:00"
         },
         {
+            "name": "opencensus/opencensus",
+            "version": "v0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/census-instrumentation/opencensus-php.git",
+                "reference": "31dc521ba3fab9653a215a10e65d5b7fe9e2c6ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/census-instrumentation/opencensus-php/zipball/31dc521ba3fab9653a215a10e65d5b7fe9e2c6ac",
+                "reference": "31dc521ba3fab9653a215a10e65d5b7fe9e2c6ac",
+                "shasum": ""
+            },
+            "require": {
+                "cache/adapter-common": "^1.0",
+                "php": ">=5.6",
+                "psr/cache": "^1.0",
+                "psr/log": "^1.0",
+                "ramsey/uuid": "~3"
+            },
+            "conflict": {
+                "ext-opencensus": "< 0.1.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "~5.3",
+                "guzzlehttp/psr7": "~1.4",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "2.*",
+                "symfony/yaml": "~3.3",
+                "twig/twig": "~2.0 || ~1.35"
+            },
+            "suggest": {
+                "cache/apc-adapter": "Enable QpsSampler to use apc cache.",
+                "cache/apcu-adapter": "Enable QpsSampler to use apcu cache.",
+                "cache/memcached-adapter": "Enable QpsSampler to use memcached cache.",
+                "ext-opencensus": "Enable tracing arbitrary functions.",
+                "opencensus/opencensus-exporter-jaeger": "Export data to Jaeger",
+                "opencensus/opencensus-exporter-stackdriver": "Export data to Stackdriver",
+                "opencensus/opencensus-exporter-zipkin": "Export data to Zipkin"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OpenCensus\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Ching",
+                    "email": "chingor@google.com"
+                }
+            ],
+            "description": "OpenCensus Trace Client for PHP",
+            "time": "2018-09-25T20:57:09+00:00"
+        },
+        {
+            "name": "opencensus/opencensus-exporter-jaeger",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/census-ecosystem/opencensus-php-exporter-jaeger.git",
+                "reference": "29480c3e77a4e7a1359cd9e66e32da7446d18bb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/census-ecosystem/opencensus-php-exporter-jaeger/zipball/29480c3e77a4e7a1359cd9e66e32da7446d18bb6",
+                "reference": "29480c3e77a4e7a1359cd9e66e32da7446d18bb6",
+                "shasum": ""
+            },
+            "require": {
+                "apache/thrift": "^0.11",
+                "ext-sockets": "*",
+                "opencensus/opencensus": "~0.4",
+                "php-64bit": ">=5.6"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "~6.0",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OpenCensus\\Trace\\Exporter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Ching",
+                    "email": "chingor@google.com"
+                }
+            ],
+            "description": "OpenCensus Jaeger Exporter for PHP",
+            "time": "2018-11-26T18:31:31+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v2.0.10",
             "source": {
@@ -1690,6 +1951,52 @@
             "time": "2016-06-16T16:22:20+00:00"
         },
         {
+            "name": "psr/cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "time": "2016-08-06T20:24:11+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -1834,6 +2141,54 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "psy/psysh",
@@ -3963,6 +4318,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-06-30T08:15:21+00:00"
         },
         {
@@ -4076,16 +4432,16 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "dev-master",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "f2e7d89ea610c629b4f74723c0d523ca12a49e30"
+                "reference": "abcc70409ddfb310a8cb41ef0c2e857425438cf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/f2e7d89ea610c629b4f74723c0d523ca12a49e30",
-                "reference": "f2e7d89ea610c629b4f74723c0d523ca12a49e30",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/abcc70409ddfb310a8cb41ef0c2e857425438cf4",
+                "reference": "abcc70409ddfb310a8cb41ef0c2e857425438cf4",
                 "shasum": ""
             },
             "require": {
@@ -4124,7 +4480,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-07-12T07:11:10+00:00"
+            "time": "2017-12-14T11:32:19+00:00"
         },
         {
             "name": "sebastian/environment",
