@@ -24,14 +24,14 @@ class OpenCensusProvider extends ServiceProvider
         PDO::load();
 
         $options = [
-            "host" => "jaeger",
-            "port" => "6831",
+            "host" => env('JAEGER_HOST', 'jaeger'),
+            "port" => env('JAEGER_PORT', '6831'),
             "tags" => [],
             'client' => null
         ];
 
         // Start the request tracing for this request
-        $exporter = new JaegerExporter( 'varun-laravel' ,$options);
+        $exporter = new JaegerExporter( env('APP_NAME', 'Laravel Test Examples') ,$options);
         // $exporter = new EchoExporter();
         // $exporter = new FileExporter('/var/www/laravel/.docker/logs/opentrace.log');
         Tracer::start($exporter);
