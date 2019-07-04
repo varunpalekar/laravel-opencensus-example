@@ -9,6 +9,9 @@
 
 define('LARAVEL_START', microtime(true));
 
+// phpinfo();
+// exit(0);
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -48,6 +51,20 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
 */
+
+// use OpenCensus\Trace\Tracer;
+// use OpenCensus\Trace\Exporter\JaegerExporter;
+
+// // phpinfo();
+// // exit();
+
+// $options = [
+//     "host" => "jaeger",
+//     "port" => "6831",
+//     "tags" => "varun-custom"
+// ];
+
+// Tracer::start(new JaegerExporter(array('varun-service-name'), $options));
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 

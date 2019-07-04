@@ -2,29 +2,44 @@ version: '2'
 
 services:
     application:
-        container_name: laravel_test_examples_application
+        # container_name: laravel_application
         image: debian
         volumes:
             - ./:/var/www/laravel
     workspace:
-        container_name: laravel_test_examples_workspace
+        # container_name: laravel_workspace
         restart: always
         image: framgia/laravel-workspace
         volumes_from:
             - application
         tty: true
-    php-fpm:
-        container_name: laravel_test_examples_php-fpm
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
         restart: always
-        image: framgia/laravel-php-fpm
+        environment:
+            PMA_HOST: mysql
+        links:
+            - mysql
+        ports:
+            - 8001:80
+
+    php-fpm:
+        # container_name: laravel_php-fpm
+        build: 
+            context: ./
+        image: varun/laravel-php-fpm
+        restart: always
+        # image: framgia/laravel-php-fpm
         volumes_from:
             - application
         expose:
             - "9000"
         links:
             - workspace
+            # - jaeger
+            - mysql
     nginx:
-        container_name: laravel_test_examples_nginx
+        # container_name: laravel_nginx
         restart: always
         image: framgia/laravel-nginx
         volumes_from:
@@ -36,27 +51,22 @@ services:
         links:
             - php-fpm
     data:
-        container_name: laravel_test_examples_data
+        # container_name: laravel_data
         image: debian
         volumes:
             - .docker/mysql:/var/lib/mysql
             - .docker/data:/data
-    data_test:
-        container_name: laravel_test_examples_data_test
-        image: debian
-        volumes:
-            - .docker/mysql_test:/var/lib/mysql
-            - .docker/data_test:/data
     logs:
-        container_name: laravel_test_examples_logs
+        # container_name: laravel_logs
         image: debian
         volumes:
             - .docker/logs/nginx:/var/log/nginx
             - .docker/logs/mongodb:/var/log/mongodb
     mysql:
-        container_name: laravel_test_examples_mysql
+        # container_name: laravel_mysql
         restart: always
         image: mysql
+        command: mysqld --default-authentication-plugin=mysql_native_password
         volumes_from:
             - data
             - logs
@@ -67,24 +77,26 @@ services:
             MYSQL_USER: homestead
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: root
-    mysql_test:
-        container_name: laravel_test_examples_mysql_test
-        restart: always
-        image: mysql
-        volumes_from:
-            - data_test
-        expose:
-            - "3306"
-        environment:
-            MYSQL_DATABASE: homestead_test
-            MYSQL_USER: homestead_test
-            MYSQL_PASSWORD: secret
-            MYSQL_ROOT_PASSWORD: root
     redis:
-        container_name: laravel_test_examples_redis
+        # container_name: laravel_redis
         restart: always
         image: redis
         expose:
             - "6379"
         volumes_from:
             - data
+    ## You can enable this if don't want to host jaeger outside
+    # jaeger: 
+    #     # container_name: laravel_jaeger
+    #     image: jaegertracing/all-in-one:1.6
+    #     restart: always
+    #     ports:
+    #         - 5775:5775/udp
+    #         - 6831:6831/udp
+    #         - 6832:6832/udp
+    #         - 5778:5778
+    #         - 16686:16686
+    #         - 14268:14268
+    #         - 9411:9411
+    #     environment:
+    #         COLLECTOR_ZIPKIN_HTTP_PORT: 9411
